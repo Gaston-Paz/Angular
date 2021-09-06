@@ -19,7 +19,7 @@ export class ListadoComponent implements OnInit {
 
   borrarHeroe(){
     console.log('Borrando...');
-    this.heroeEliminado = this.heroes.splice(5,1).toString();
+    this.heroeEliminado = this.heroes.splice(0,1).toString();
   }
 
 }
