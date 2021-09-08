@@ -15,6 +15,22 @@
 
 </div>
 
+<ul class="list-group">
+    <li 
+        *ngFor="let sugerencia of paisesSugeridos" 
+        (click)="buscar(sugerencia.name)" 
+        class="list-group-item list-group-item-action"
+        [routerLink]="['/pais', sugerencia.alpha2Code]"
+    > <a class="nav-link">  
+    {{sugerencia.name}} </a> </li>
+    <li 
+        *ngIf="termino"
+        (click)="buscar(termino)" 
+        class="list-group-item list-group-item-action"
+    > <a class="nav-link">  
+    Buscar "{{termino}}" </a> </li>
+</ul>
+
 <hr>
 <div *ngIf="hayError" class="alert alert-danger">
     No se encontró nada con el término {{termino}}
