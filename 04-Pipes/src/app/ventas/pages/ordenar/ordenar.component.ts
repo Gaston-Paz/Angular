@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdenarComponent implements OnInit {
 
+  mayus: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiar(){
+    this.mayus = !this.mayus;
   }
 
 }

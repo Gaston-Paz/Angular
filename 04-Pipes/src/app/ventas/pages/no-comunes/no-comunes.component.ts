@@ -11,6 +11,7 @@ export class NoComunesComponent implements OnInit {
 
   nombre: string = 'Florencia';
   genero: string = 'femenino';
+  
   invitacionMapa = {
     'masculino': 'lo',
     'femenino': 'la'

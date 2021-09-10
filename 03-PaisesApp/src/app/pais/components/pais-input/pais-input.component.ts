@@ -21,7 +21,7 @@ export class PaisInputComponent implements OnInit {
 
   buscar(){
     this.onEnter.emit(this.termino);
-
+    console.log('input');
   }
 
   teclaPresionada(){
