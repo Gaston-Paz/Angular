@@ -11,6 +11,7 @@ import { Heroes } from '../../interfaces/heroes.interface';
 export class ListadoComponent implements OnInit {
 
   listadoHeroes: Heroes[] = [];
+  heroes!: Heroes;
 
   constructor(private heroesService: HeroesService) { }
 
@@ -19,5 +20,6 @@ export class ListadoComponent implements OnInit {
     subscribe( resp => {this.listadoHeroes = resp;});
   }
 
+  
 
 }

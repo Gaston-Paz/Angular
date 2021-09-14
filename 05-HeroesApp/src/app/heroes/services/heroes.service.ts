@@ -25,4 +25,15 @@ export class HeroesService {
     return this.http.get<Heroes[]>(this.UrlDBHeroes + '?q=' + termino + '&_limit=6');
   }
 
+  guardarHeroe(heroe: Heroes): Observable<Heroes>{
+    return this.http.post<Heroes>(this.UrlDBHeroes, heroe);
+  }
+
+  editarHeroe(heroe: Heroes): Observable<Heroes>{
+    return this.http.put<Heroes>(this.UrlDBHeroes + heroe.id, heroe);
+  }
+
+  eliminarHeroe(heroe: Heroes): Observable<Heroes>{
+    return this.http.delete<Heroes>(this.UrlDBHeroes + heroe.id);
+  }
 }
