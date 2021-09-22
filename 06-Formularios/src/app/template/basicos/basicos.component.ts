@@ -27,6 +27,7 @@ export class BasicosComponent implements OnInit {
   }
 
   guardar(){
+    console.log(this.miFormulario.controls.Producto.value);
     this.miFormulario.resetForm();
   }
 

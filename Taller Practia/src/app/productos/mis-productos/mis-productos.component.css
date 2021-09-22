@@ -1,0 +1,42 @@
+/* .container{
+
+  max-width: 100%;
+  padding: 20px;
+}
+.row{
+
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .col{
+    flex-direction: column;
+  
+    width: 50%;
+    align-self: center;
+    text-align: center;
+  
+  } */
+  .container{
+    max-width: 100%;
+  }
+  
+  .row{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .row h2{
+    text-align: center;
+  }
+  
+  .col{
+    flex-direction: column;
+    width: 50%;
+  
+  }
+
+  
+  

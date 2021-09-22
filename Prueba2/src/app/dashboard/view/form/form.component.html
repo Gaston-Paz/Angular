@@ -1,0 +1,35 @@
+<form class="example-form" (ngSubmit)="guardar()" autocomplete="off" [formGroup]="miFormulario">
+    <div class="col-f">
+
+        <div class="row  mb-5">
+            <mat-form-field class="example-full-width " appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input type="text" matInput placeholder="Nombre del producto" [(ngModel)]="aEditar.name" name="name" formControlName="name" required />
+            </mat-form-field>
+
+        </div>
+
+        <div class="row  mb-5">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Precio</mat-label>
+                <input type="number" matInput placeholder="Precio del producto" [(ngModel)]="aEditar.price" formControlName="price" required />
+            </mat-form-field>
+        </div>
+
+        <div class="row  mb-5">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Imagen</mat-label>
+                <input type="text" matInput placeholder="Imagen del producto" [(ngModel)]="aEditar.img" name="img" formControlName="img" required />
+            </mat-form-field>
+        </div>
+
+
+    </div>
+
+
+
+    <button mat-raised-button color="primary" class="mt-5">Guardar
+        <mat-icon>favorite</mat-icon>
+    </button>
+
+</form>

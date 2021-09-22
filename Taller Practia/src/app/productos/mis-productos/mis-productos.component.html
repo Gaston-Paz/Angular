@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-abm [aEditar]="nuevo" (messageEvent)="agregaraListado($event)"></app-abm>
+
+        </div>
+        <div class="col">
+            <app-listado (productoeditar)="cargarEdicion($event)" [lista]="listProducts"></app-listado>
+
+        </div>
+    </div>
+</div>

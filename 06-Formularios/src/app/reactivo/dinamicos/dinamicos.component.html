@@ -1,1 +1,73 @@
-<p>dinamicos works!</p>
+<h2>Reactivos: Dinámicos</h2>
+<hr>
+
+<form (ngSubmit)="guardar()" [formGroup]="miFormulario" autocomplete="off">
+    <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">Nombre</label>
+    
+        <div class="col-sm-9">
+            <input 
+                type="text" 
+                placeholder="Nombre de la persona" 
+                formControlName="nombre" 
+                class="form-control" >
+            <span 
+                class="form-text text-danger" 
+                *ngIf="campoInvalido('nombre')"
+                >Este campo es obligatorio y debe tener 3 caracteres</span>
+        </div>
+    
+    
+    </div>
+
+    <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">Agregar</label>
+    
+        <div class="col-sm-9">
+            <div class="input-group">
+
+                <input 
+                    type="text" 
+                    placeholder="Agregar favorito" 
+                    [formControl]="nuevoFavorito" 
+                    class="form-control"
+                    (keyup.enter)="agregarFav()"
+                >
+                <button 
+                    type="button" 
+                    class="btn btn-outline-primary"
+                    (click)="agregarFav()"
+                >Agregar</button>
+            </div>
+           
+        </div>
+    
+    
+    </div>
+
+
+    <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">Favoritos</label> 
+        <div class="col-sm-9" formArrayName="favoritos">
+            <div 
+                class="input-group mb-1" 
+                *ngFor="let fav of favoritosArr.controls; let i = index"
+                >
+                <input class="form-control" [formControlName]="i"
+                >
+                <button 
+                    type="button" 
+                    class="btn btn-outline-danger"
+                    (click)="borrar(i)"
+                >Eliminar</button>
+            </div>   
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-primary float-end">Guardar</button>
+        </div>
+    </div>
+    
+</form>

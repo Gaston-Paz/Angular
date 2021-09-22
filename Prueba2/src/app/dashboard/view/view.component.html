@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-30 mt-15">
+            <app-form [listado]="listadoProductos" [aEditar]="editarse" (messageEvent)="guardarProducto($event)"></app-form>
+        </div>
+
+        <div class="col-70">
+            <div class="input-center">
+
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Buscar</mat-label>
+                    <input matInput type="text" placeholder="Buscar" (keypress)="filtrar($event)" [(ngModel)]="value">
+                    <button *ngIf="value" matSuffix mat-icon-button aria-label="Buscar" (click)="value=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+
+            <div class="container">
+                <app-producto (editarlo)="editarse = $event" (borrar)="eliminar($event)"
+                    *ngFor="let item of listadoFiltrado" [producto]="item"></app-producto>
+            </div>
+        </div>
+    </div>
+</div>

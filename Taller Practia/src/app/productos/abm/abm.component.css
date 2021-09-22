@@ -1,0 +1,147 @@
+
+.container{
+
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .row{
+
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .row-principal{
+    width: 100%;
+    display: -webkit-inline-box;
+    flex-flow: row nowrap;
+  
+  }
+  
+  .input{
+    width: 100%;
+  }
+  
+  .bet{
+  
+    justify-content: space-around;
+  }
+  
+  .start{
+    justify-content: start;
+    margin-left: 85px;
+  }
+  
+  .row h2{
+    text-align: center;
+  }
+  
+  .col{
+    flex-direction: column;
+  
+    width: 50%;
+    align-self: center;
+    text-align: center;
+  
+  }
+  
+  .centro{
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  .col-f{
+    flex-direction: column;
+
+    width: 100%;
+  }
+  
+  form{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    margin: auto;
+  }
+  
+  .container-table-users{
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 80%;
+      border: 1px solid lightgray;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: lightgray;
+  
+    }
+    
+    table {
+      width: 100%;
+    }
+    
+    .mat-form-field {
+      font-size: 14px;
+      width: 10%;
+    }
+    
+    td, th {
+      width: 25%;
+  
+    }
+    
+    th.mat-header-cell{
+      text-align: center;
+      font-size: 16px;
+      padding: 5px;
+      font-weight: bold;
+    }
+    
+    .w-100 {
+      width: 100%;
+    }
+    
+    .mb-5{
+      margin-bottom: 15px;
+    }
+  
+    .mt-5{
+      margin-top: 15px;
+    }
+  
+    .example-form {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .example-full-width {
+      width: 100%;
+    }
+    
+    .table{
+      background-color: lightgray;
+    }
+  
+    .ml-5{
+      margin-left: 10px;
+    }
+  
+    .example-form-buscar{
+      width: 50%;
+    }
+  
+    h1{
+      background-color:lightgray;
+      width: 25%;
+      margin: auto;
+      border-radius: 10px;
+      padding: 5px;
+      margin-bottom: 20px;
+      
+    }
+
